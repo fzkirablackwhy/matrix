@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Kontur_front_test</title>
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+    <script type='text/javascript' src='js/bootstrap.min.js'></script>
+</head>
+<body>
+    <div class="main-container" id="main-container">
+        <!--Sidebar starts-->
+        <div id="sidebar" class="theory_sidebar">
+        <h3>Знаешь - применяй</h3>
+        <p>Итак, мы разобрали как производится умножение матриц на простом примере. На этом шаге Вам предстоит сделать это самостоятельно.</p>
+        <div class="error-message"></div>
+            <div class="access-message"></div>
+        <form action="first.html">
+            <button type="submit" id="button-back" style="display: none;"class="button-chk">Вернуться к теории</button>
+        </form>
+        <form action="third.html">
+            <button type="submit" id="button-next" style="display: none;"class="button-chk">Дальше</button>
+        </form>
+        </div>
+        
+        <!--sidebar ends-->
+        <div id="main" class="">
+            <div id="C" class="matrix" style="display: none">
+                <div class="row">
+                    <input type="text" class="element" value="7" data-value="c1,1" data-row="1" data-col="1" disabled/>
+                    <input type="text" class="element" value="10" data-value="c1,2" data-row="1" data-col="2" disabled/>
+                </div>
+                <div class="row">
+                    <input type="text" class="element" value="6" data-value="c2,1" data-row="2" data-col="1" disabled/>
+                    <input type="text" class="element" value="4" data-value="c2,2" data-row="2" data-col="2" disabled/>
+                </div>
+            </div>
+            <div id="A" class="matrix first">
+                <div class="name">A</div>
+                <div class="row">
+                    <input type="text" class="element" value="1" data-value="a1,1" data-row="1" data-col="1" disabled/>
+                    <input type="text" class="element" value="2" data-value="a1,2" data-row="1" data-col="2"
+                    disabled/>
+                </div>
+                <div class="row">
+                    <input type="text" class="element" value="2" data-value="a2,1" data-row="2" data-col="1"
+                    disabled/>
+                    <input type="text" class="element" value="0" data-value="a2,2" data-row="2" data-col="2"
+                    disabled/>
+                </div>
+            </div>
+
+            <div id="B" class="matrix second">
+                <div class="row">
+                    <input type="text" class="element" value="3" data-value="b1,1" data-row="1" data-col="1"/
+                    disabled>
+                    <input type="text" class="element" value="2" data-value="b1,2" data-row="1" data-col="2"/
+                    disabled>
+                </div>
+                <div class="row">
+                    <input type="text" class="element" value="2" data-value="b2,1" data-row="2" data-col="1"/
+                    disabled>
+                    <input type="text" class="element" value="4" data-value="b2,2" data-row="2" data-col="2"/
+                    disabled>
+                </div>
+            <div class="name name_check">B</div>
+            </div>
+            <div class="answer">
+                <p class="">Ваш ответ введите здесь:</p>
+            </div>
+            <div id="D" class="matrix">
+                <div class="row">
+                    <input type="text" class="element" value="c1,1" data-value="c1,1" data-row="1" data-col="1">
+                    <input type="text" class="element" value="c1,2" data-value="c1,2" data-row="1" data-col="2"/>
+                </div>
+                <div class="row">
+                    <input type="text" class="element" value="c2,1" data-value="c2,1" data-row="2" data-col="1"/>
+                    <input type="text" class="element" value="c2,2" data-value="c2,2" data-row="2" data-col="2"/>
+                </div>
+            </div>
+            <div class="checking">
+            <button id="check-button" class="button green">Проверить!</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

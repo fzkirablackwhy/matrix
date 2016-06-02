@@ -1,0 +1,461 @@
+@font-face {
+    font-family: Kontur-lconic-eco;
+    src: url('fonts/Kontur-Iconic-eco.eot');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: Kontur-lconic-eco;
+    src: url(fonts/Kontur-Iconic-eco.ttf);
+}
+
+/*==
+    base
+==*/
+body {
+    line-height: 20px;
+    height: 100%;
+    margin:0;
+}
+
+body, input, select, textarea, button {
+    font: 14px "Segoe UI", sans-serif;
+}
+input, button {
+    font-size: 14px;
+    color: #404040;
+    line-height: 20px;
+}
+input[type = text] {
+    border: 1px solid #d9d9d9;
+    border-top-color: #b2b2b2;
+    box-shadow: inset 0 1px #f2f2f2;
+}
+.main-container{
+    width: auto;
+    height: 100%;
+}
+#main{
+    height:400px;
+}
+
+/*===
+    sidebar
+===*/
+#sidebar {
+    width: 310px;
+    padding-left: 20px;
+    padding-right: 20px;
+    height: 100%;
+    background-color: #ccc;
+    position:absolute;
+}
+#sidebar.edit {
+    background-color: #BBD5EC;;
+}
+#sidebar.error {
+    background-color: #ffece8;
+}
+#sidebar.access {
+    background-color: #B1E8B1;
+}
+
+/*main-wrapper*/
+#main {
+    margin-left: 350px;
+}
+
+/*
+    answer
+*/
+.answer p{
+    margin: 20px 40px;
+    font-size: 20px;
+}
+
+/*
+    matrix
+*/
+.matrix {
+    position: relative;
+    display: inline-block;
+    margin: 20px 40px;
+    padding: 10px 10px 0 10px;
+}
+.matrix:before {
+    display: block;
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 10px;
+    height: 100%;
+    border-left: 2px solid #404040;;
+    border-top: 2px solid #404040;;
+    border-bottom: 2px solid #404040;;
+}
+.matrix:after {
+    display: block;
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 10px;
+    height: 100%;
+    border-right: 2px solid black;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+}
+#C {
+    float: left;
+}
+.matrix .name {
+    position: absolute;
+    top: 43%;
+    right: -40px;
+    font-size: 25px;
+}
+#B > div.name{
+    top: 120%;
+    left: 45%;
+}
+div.name_check{
+    position: absolute;
+    top: 43%!important;
+    right: -40px;
+    font-size: 25px;
+    left: 120%!important;
+}
+.row {
+    margin-bottom: 10px;
+    font-size: 0;
+}
+
+/*
+    matrix element
+*/
+.element {
+    width: 40px;
+    height: 20px;
+    margin: 0 5px;
+    padding: 10px 0;
+    text-align: center;
+    color: #d4d4d4;
+}
+.element[disabled] {
+    color: #000;
+    cursor: default;
+}
+.clear-left {
+    float: left;
+    clear: both;
+}
+
+.error-message {
+    width: 263px;
+    margin-top: 50px;
+    color: red;
+    margin-top: 50px;
+    margin-bottom: 40px;
+    font-size: 17px;
+    font-weight: bold;
+}
+.access-message {
+    width: 263px;
+    margin-bottom: 40px;
+    font-size: 17px;
+    color: green;
+    font-weight: bold;
+}
+
+
+/*===buttons===*/
+button {
+    position: relative;
+    padding: 0 6px;
+    text-align: left;
+    vertical-align: top;
+    border-radius: 3px;
+    /* IE*/
+    background: #fdfdfd;
+    background: linear-gradient(to bottom, #fdfdfd, #ececec);
+    border: 1px solid #d9d9d9;
+    border-bottom: 1px solid rgba(131, 131, 131, .5);
+    outline: none;
+    cursor: pointer;
+    box-shadow: 0px 1px rgba(131, 131, 131, .5);
+    box-sizing: content-box;
+
+}
+button:disabled {
+    background: #f2f2f2;
+    color: #808080;
+}
+button:focus {
+    top: -1px;
+    margin-right: -1px;
+    margin-left: -1px;
+    outline: none;
+    border: 2px solid #5199db;
+}
+button:hover {
+    background: linear-gradient(to bottom, #f2f2f2, #dfdfdf);
+}
+button:disabled:hover {
+    background: #f2f2f2;
+    cursor: default;
+}
+button::-moz-focus-inner {
+    border: 0;
+    outline: 0;
+}
+
+.text-arrow {
+    font-size: 16px;
+}
+
+
+/*
+    multiply-button
+*/
+#multiply-button-wrap {
+    height: 50px;
+    margin: 30px 0 50px 0;
+}
+#multiply-button {
+    position: relative;
+    display: block;
+    width: 175px;
+    height: 40px;
+    text-align: center;
+    color: white;
+    font-size: 15px;
+    border: 1px solid rgba(74, 128, 60, .5);
+    border-bottom: 1px solid rgba(55, 102, 43, .5);
+}
+
+#multiply-button {
+    background: #4aa71c;
+    background: linear-gradient(to bottom, #4ba81d, #38920c);
+}
+#multiply-button:after {
+    content: "";
+    position: absolute;
+    width: 26px;
+    height: 26px;
+    z-index: 0;
+    border-right: 1px solid rgba(74, 128, 60, .5);
+    background: #4aa71c;
+    background: linear-gradient(135deg, #4ba81d, #38920c);
+    top: 7px;
+    right: -12.5px;
+    transform: rotate(55deg) skew(20deg);
+    border-radius: 19%;
+}
+#multiply-button:hover {
+    background: #317e0b;
+    background: linear-gradient(to bottom, #3b8d13, #317e0b);
+}
+#multiply-button:hover:after{
+    background: #317e0b;
+    background: linear-gradient(135deg, #3b8d13, #317e0b);
+}
+#multiply-button:focus {
+    border: 2px solid #5199db;
+}
+#multiply-button:focus:after{
+    border: 2px solid #5199db;
+    border-radius: 0;
+    border-left: transparent;
+    border-bottom: transparent;
+    width: 24px;
+    height: 24px;
+    right: -14.5px;
+}
+/*
+    button-chk
+*/
+.button-chk {
+    position: relative;
+    display: block;
+    width: 175px;
+    height: 40px;
+    text-align: center;
+    color: white;
+    font-size: 15px;
+    border: 1px solid rgba(60, 72, 128, 0.5);
+    border-bottom: 1px solid rgba(43, 45, 102, 0.5);
+    margin: 20px 0;
+}
+
+.button-chk {
+    background: #4aa71c;
+    background: linear-gradient(to bottom, #1D60A8, #0C4292);
+}
+.button-chk:hover {    
+    background: linear-gradient(to bottom, #13538C, #094669)!important;
+}
+
+/*
+    check-button
+*/
+#multiply-button-wrap {
+    height: 50px;
+    margin: 30px 0 50px 0;
+}
+#check-button {
+    position: relative;
+    display: block;
+    width: 175px;
+    height: 40px;
+    text-align: center;
+    color: white;
+    font-size: 15px;
+    border: 1px solid rgba(74, 128, 60, .5);
+    border-bottom: 1px solid rgba(55, 102, 43, .5);
+}
+
+#check-button {
+    background: #4aa71c;
+    background: linear-gradient(to bottom, rgb(76, 195, 76), rgb(55, 140, 55));
+}
+
+#check-button:hover {
+    background: #317e0b;
+    background: linear-gradient(to bottom, #138D24, #0B7E2E);
+}
+#check-button:hover:after{
+    background: #317e0b;
+    background: linear-gradient(135deg, #138D24, #0B7E2E);
+}
+#check-button:focus {
+    border: 2px solid #5199db;
+}
+#check-button:focus:after{
+    border: 2px solid #5199db;
+    border-radius: 0;
+    border-left: transparent;
+    border-bottom: transparent;
+    width: 24px;
+    height: 24px;
+    right: -14.5px;
+}
+/*
+    clear-button
+*/
+#clear-button-wrap {
+    height: 35px;
+    margin: 0 0 10px 0;
+}
+#clear-button {
+    display: block;
+    width: 143px;
+    height: 28px;
+}
+
+/*
+    switch button
+*/
+#switch-button-wrap {
+    height: 35px;
+    margin: 0 0 10px 0;
+}
+#switch-button {
+    display: block;
+    width: 208px;
+    height: 28px;
+}
+
+/*
+    checks
+*/
+.checkboxes {
+    position: relative;
+    margin: 50px 0 20px 0;
+    overflow: hidden;
+}
+.checkboxes label {
+    margin-right: 15px;
+    padding-left: 25px;
+    cursor: pointer;
+}
+.checkboxes input {
+    position: absolute;
+    top: -30px;
+}
+.checkboxes input + label {
+    background: url("../img/radio.png") 0 2px no-repeat;
+}
+.checkboxes input:checked + label {
+    background: url("../img/radio.png") 0 -78px no-repeat;
+}
+.checkboxes input:focus + label {
+    background: url("../img/radio.png") 0 -98px no-repeat;
+}
+.checkboxes label:hover {
+    background: url("../img/radio.png") 0 -59px no-repeat;
+}
+
+/*
+    add/delete buttons
+*/
+.buttons-wrap {
+    position: relative;
+    height: 40px;
+    line-height: 28px;
+}
+#add-row, #add-column {
+    width: 95px;
+    height: 28px;
+    line-height: 28px;
+}
+#delete-row, #delete-column {
+    width: 85px;
+    height: 28px;
+    line-height: 28px;
+}
+
+/*icons*/
+.konturSymbol {
+    font-family: "Kontur-lconic-eco", serif;
+    margin-right: 4px;
+}
+
+/*check.html*/
+.signs{
+    display: inline-block;
+    font-size: 40px;
+    vertical-align: top;
+    margin: 46px 19px;
+}
+#D {
+   
+}
+
+/*theory-page*/
+.theory_sidebar{
+    font-size: 15px;
+}
+.theory{
+    padding: 15px;
+}
+    .theory h3{
+        margin:0;
+    }
+    .theory p{
+        font-size:15px;
+    }
+
+    .theory > .matrix{
+    margin: 10px 30px;    
+    vertical-align: middle;
+}
+.checking button{
+    margin:40px;
+}
+.name{
+    clear: both;
+    float: left;
+    vertical-align: bottom;
+}

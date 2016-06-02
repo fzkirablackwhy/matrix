@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Kontur_front_test</title>
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+    <script type='text/javascript' src='js/bootstrap.min.js'></script>
+</head>
+<body>
+    <div class="main-container" id="main-container">
+        <!--Sidebar starts-->
+        <div id="sidebar" class="theory_sidebar">
+            <h2>Первые шаги.</h2>
+            <p><i>Матрица</i> — математический объект, записываемый в виде прямоугольной таблицы чисел и допускающий алгебраические операции (сложение, вычитание, умножение) между ним и другими подобными объектами.</p>
+            <p><i>Умноже́ние ма́триц</i> — одна из основных операций над матрицами. Матрица, получаемая в результате операции умножения, называется произведе́нием ма́триц.</p>
+            <h3>Определение</h3>
+            <p>Произведением матрицы <b><i>A<sub>m x n</sub></i></b> на матрицу <b><i>B<sub>n x k</sub></i></b> называется матрица <b><i>C<sub>m x k</sub></i></b> такая, что элемент матрицы <i>C</i>, стоящий в  <i>i</i>-ой строке и  <i>j</i>-ом столбце, т.е. элемент c<sub>i,j</sub> равен сумме произведений элементов  <i>i</i>-ой строки матрицы <i>A</i>  на соответствующие элементы  <i>j</i>-ого столбца матрицы <i>B</i>.</p>
+            <h3>Замечание</h3>
+            <p>Умножать матрицы можно тогда и только тогда, когда количество столбцов первой матрицы равно количеству строк второй матрицы.</p>
+            <p>Нажмите на кнопку, чтобы попробовать выполнить умножение матриц самому</p>
+            <form action="second.html">
+                <button type="submit" id="button-chk" style="margin-bottom: 0px;"class="button-chk">Перейти дальше</button>
+            </form>
+        </div>
+        <!--sidebar ends-->
+        <div id="main" class="theory">
+            
+            
+            <h3>Пример</h3>
+            <div id="A" class="matrix first">
+                <div class="name">A</div>
+                <div class="row">
+                    <input type="text" class="element" value="1" data-value="a1,1" data-row="1" data-col="1" disabled/>
+                    <input type="text" class="element" value="-1" data-value="a1,2" data-row="1" data-col="2"disabled/>
+                </div>
+                <div class="row">
+                    <input type="text" class="element" value="2" data-value="a2,1" data-row="2" data-col="1"disabled/>
+                    <input type="text" class="element" value="0" data-value="a2,2" data-row="2" data-col="2"disabled/>
+                </div>
+                <div class="row">
+                    <input type="text" class="element" value="3" data-value="a1,1" data-row="3" data-col="1"disabled/>
+                    <input type="text" class="element" value="0" data-value="a1,2" data-row="3" data-col="2"disabled/>
+                </div>
+            </div>
+            <div id="B" class="matrix second">
+                <div class="row">
+                    <input type="text" class="element" value="1" data-value="b1,1" data-row="1" data-col="1"disabled/>
+                    <input type="text" class="element" value="1" data-value="b1,2" data-row="1" data-col="2"disabled/>
+                </div>
+                <div class="row">
+                    <input type="text" class="element" value="2" data-value="b2,1" data-row="2" data-col="1"disabled/>
+                    <input type="text" class="element" value="0" data-value="b2,2" data-row="2" data-col="2"disabled/>
+                </div>
+                <div class="name name_check">B</div>
+            </div>
+            <div id="" class="matrix">
+            <div class="name">C</div>
+                <div class="row">
+                    <input type="text" class="element" value="c1,1" data-value="c1,1" data-row="1" data-col="1" disabled/>
+                    <input type="text" class="element" value="c1,2" data-value="c1,2" data-row="1" data-col="2" disabled/>
+                </div>
+                <div class="row">
+                    <input type="text" class="element" value="c2,1" data-value="c2,1" data-row="2" data-col="1" disabled/>
+                    <input type="text" class="element" value="c2,2" data-value="c2,2" data-row="2" data-col="2" disabled/>
+                </div>
+                <div class="row">
+                    <input type="text" class="element" value="c3,1" data-value="c2,1" data-row="2" data-col="1" disabled/>
+                    <input type="text" class="element" value="c3,2" data-value="c2,2" data-row="2" data-col="2" disabled/>
+                </div>
+            </div>
+            <p>Так как <i>A = A<sub>3 x 2</sub></i>, а <i>B = B<sub>2 x 2</sub></i>, то произведение возможно и результатом операции умножения будет матрица <i>C = C<sub>3 x 2</sub></i><br>а это матрица вида <b>C</b>.</p>
+            <div>
+            <p><b>Вычислим элементы матрицы C:</b></p>
+            <p>c<sub>11</sub> = a<sub>11</sub> * b<sub>11</sub> + a<sub>12</sub> * b<sub>21</sub> = 1 * 1 + (-1) * 2 = -1</p>
+            <p>c<sub>12</sub> = a<sub>11</sub> * b<sub>12</sub> + a<sub>12</sub> * b<sub>22</sub> = 1 * 1 + (-1) * 0 = 1</p>
+            <p>c<sub>21</sub> = a<sub>21</sub> * b<sub>11</sub> + a<sub>22</sub>*b<sub>21</sub> = 2 * 1 + 0 * 2 = 2</p>
+            <p>c<sub>22</sub> = a<sub>21</sub> * b<sub>12</sub> + a<sub>22</sub>*b<sub>22</sub> = 2 * 1 + 0 * 0 = 2</p>
+            <p>c<sub>31</sub> = a<sub>31</sub> * b<sub>11</sub> + a<sub>32</sub>*b<sub>21</sub> = 3 * 1 + 0 * 2 = 3</p>
+            <p>c<sub>32</sub> = a<sub>31</sub> * b<sub>12</sub> + a<sub>32</sub>*b<sub>22</sub> = 3 * 1 + 0 * 0 = 3</p>
+            </div>
+            <div class="name"><p>Итак, <i>C = AB = </i> </p></div>
+            <div id="" class="matrix">
+                <div class="row">
+                    <input type="text" class="element" value="-1" data-value="c1,1" data-row="1" data-col="1" disabled/>
+                    <input type="text" class="element" value="1" data-value="c1,2" data-row="1" data-col="2" disabled/>
+                </div>
+                <div class="row">
+                    <input type="text" class="element" value="2" data-value="c2,1" data-row="2" data-col="1" disabled/>
+                    <input type="text" class="element" value="2" data-value="c2,2" data-row="2" data-col="2" disabled/>
+                </div>
+                <div class="row">
+                    <input type="text" class="element" value="3" data-value="c3,1" data-row="3" data-col="1" disabled/>
+                    <input type="text" class="element" value="3" data-value="c3,2" data-row="3" data-col="2" disabled/>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

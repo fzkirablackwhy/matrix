@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Kontur_front_test</title>
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+    <script type='text/javascript' src='js/bootstrap.min.js'></script>
+</head>
+<body>
+    <div class="main-container" id="main-container">
+        <!--Sidebar starts-->
+        <div id="sidebar">
+            <div id="multiply-button-wrap">
+                <button id="check-button" class="button green">Проверить!</button>
+            </div>
+            <div id="clear-button-wrap">
+                <button id="clear-button" class="button"><span class="konturSymbol"></span>Очистить матрицы</button>
+            </div>
+            <div id="switch-button-wrap">
+                <button id="switch-button" class="button"><span class="konturSymbol"></span>Поменять матрицы местами</button>
+            </div>
+            <div class="checkboxes">
+                <input type="radio" name="matrix" id="matrixA" value="A" checked="checked">
+                <label for="matrixA" title="Выбрать матрицу A">Матрица А</label>
+                <input type="radio" name="matrix" id="matrixB" value="B">
+                <label for="matrixB" title="Выбрать матрицу B">Матрица B</label>
+            </div>
+            <div class="buttons-wrap">
+                <button id="add-row" class="button"><span class="konturSymbol"></span>Добавить</button>
+                <button id="delete-row" class="button"><span class="konturSymbol"></span>Удалить</button>
+                <span>строку</span>
+            </div>
+            <div class="buttons-wrap">
+                <button id="add-column" class="button"><span class="konturSymbol"></span>Добавить</button>
+                <button id="delete-column" class="button"><span class="konturSymbol"></span>Удалить</button>
+                <span>столбец</span>
+            </div>
+            <div class="error-message"></div>
+            <div class="access-message"></div>
+            <form action="first.html">
+            <button type="submit" id="button-back" style="display: none;"class="button-chk">Вернуться к теории</button>
+        </form>
+        </div>
+        <!--sidebar ends-->
+        <div id="main">
+            <div id="C" class="matrix" style="display: none">
+                <div class="row">
+                    <input type="text" class="element" value="c1,1" data-value="c1,1" data-row="1" data-col="1" disabled/>
+                    <input type="text" class="element" value="c1,2" data-value="c1,2" data-row="1" data-col="2" disabled/>
+                </div>
+                <div class="row">
+                    <input type="text" class="element" value="c2,1" data-value="c2,1" data-row="2" data-col="1" disabled/>
+                    <input type="text" class="element" value="c2,2" data-value="c2,2" data-row="2" data-col="2" disabled/>
+                </div>
+            </div>
+            <div id="A" class="matrix first">
+                <div class="name">A</div>
+                <div class="row">
+                    <input type="text" class="element" value="a1,1" data-value="a1,1" data-row="1" data-col="1"/>
+                    <input type="text" class="element" value="a1,2" data-value="a1,2" data-row="1" data-col="2"/>
+                </div>
+                <div class="row">
+                    <input type="text" class="element" value="a2,1" data-value="a2,1" data-row="2" data-col="1"/>
+                    <input type="text" class="element" value="a2,2" data-value="a2,2" data-row="2" data-col="2"/>
+                </div>
+            </div>
+
+            <div id="B" class="matrix second">
+                <div class="row">
+                    <input type="text" class="element" value="b1,1" data-value="b1,1" data-row="1" data-col="1"/>
+                    <input type="text" class="element" value="b1,2" data-value="b1,2" data-row="1" data-col="2"/>
+                </div>
+                <div class="row">
+                    <input type="text" class="element" value="b2,1" data-value="b2,1" data-row="2" data-col="1"/>
+                    <input type="text" class="element" value="b2,2" data-value="b2,2" data-row="2" data-col="2"/>
+                </div>
+                <div class="name name_check">B</div>
+            </div>
+            <div class="answer">
+                <p class="">Ваш ответ введите здесь:</p>
+            </div>
+            <div id="D" class="matrix">
+                <div class="row">
+                    <input type="text" class="element" value="c1,1" data-value="c1,1" data-row="1" data-col="1">
+                    <input type="text" class="element" value="c1,2" data-value="c1,2" data-row="1" data-col="2"/>
+                </div>
+                <div class="row">
+                    <input type="text" class="element" value="c2,1" data-value="c2,1" data-row="2" data-col="1"/>
+                    <input type="text" class="element" value="c2,2" data-value="c2,2" data-row="2" data-col="2"/>
+                </div>
+            </div>
+            
+        </div>
+	</div>
+</body>
+</html>
